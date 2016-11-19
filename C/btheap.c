@@ -1,9 +1,9 @@
 #include "btheap.h"
 
-void InitialBTHeap(Node* root, Node* last,Node* r)
+void InitialBTHeap(Node** root, Node** last,Node* r)
 {	
-	root = r;
-	last = r;
+	*root = r;
+	*last = r;
 }
 
 int empty(Node* root)

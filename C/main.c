@@ -28,8 +28,8 @@ int main(void)
 	test = InitialNode(1000); //Tests for Perculate All the Way Up from Very Bottom
 	fin = InitialNode(10); //Tests for New Root Node Case if Retrieve After Remove() once.
 
-	//InitialBTHeap(root, last, n1);
-	root = n1;
+	InitialBTHeap(&root, &last, n1);
+	//root = n1;
 	//last = n1;	
 	//printf("root->data= %d\n",root->data);
 	
@@ -155,6 +155,9 @@ int main(void)
 	if(last != NULL)
 		last = remove(root,last);
 
+	if(last == NULL)
+		root = NULL;
+		
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
 	printf("\n");

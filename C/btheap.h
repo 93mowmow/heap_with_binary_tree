@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "node.h"
 
-void InitialBTHeap(Node* root, Node* last,Node* r);
+void InitialBTHeap(Node** root, Node** last,Node* r);
 int empty(Node* root);
 Node* insert(Node *root, Node *n);
 void perculateUp(Node *p, Node *n);
