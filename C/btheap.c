@@ -45,7 +45,7 @@ void perculateUp(Node *p, Node *n)
 }
 
 
-Node* remove(Node *root, Node *last)
+Node* heap_remove(Node *root, Node *last)
 {
 	int temp;
 	Node *tempLast;
@@ -145,3 +145,12 @@ Node* posorderinsert(Node *Tree) // LRV
 	//printf("%d,",Tree->data);    // Traversal current node
 	return ret;
 } // end of function inorderTraversal
+
+void HeapSort(Node *root, Node *last)
+{
+	while(!empty(root))
+	{
+		retrieve(root,last);
+		heap_remove(root,last);
+	}
+}

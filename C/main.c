@@ -66,7 +66,7 @@ int main(void)
 	//REMOVE LARGEST NODE
 	printf ("CURRENT ROOT: \n"); 
 	retrieve(root,last);
-	last = remove(root,last);
+	last = heap_remove(root,last);
 	
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -81,7 +81,7 @@ int main(void)
 
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -89,7 +89,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -97,7 +97,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -105,7 +105,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -113,7 +113,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -121,7 +121,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -129,7 +129,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -137,7 +137,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -145,7 +145,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -153,7 +153,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	if(last == NULL)
 		root = NULL;
@@ -164,7 +164,7 @@ int main(void)
 	
 	retrieve(root,last);
 	if(last != NULL)
-		last = remove(root,last);
+		last = heap_remove(root,last);
 
 	ch = getchar();
 	return 0;

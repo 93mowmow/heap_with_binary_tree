@@ -10,7 +10,7 @@ LDFLAGS = -L/usr/lib -lm -lz
 #-----
 all : heap_with_binary_tree
 
-heap_with_binary_tree: main.o btheap.o node.o
+heap_with_binary_tree:
 	$(CC) main.o btheap.o node.o $(CFLAGS) $(LDFLAGS) -o heap_with_binary_tree
 main.o: main.c
 	$(CC) main.c $(CFLAGS) $(LDFLAGS) -c
