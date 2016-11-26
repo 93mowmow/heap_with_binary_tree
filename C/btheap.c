@@ -151,6 +151,15 @@ void HeapSort(Node *root, Node *last)
 	while(!empty(root))
 	{
 		retrieve(root,last);
-		heap_remove(root,last);
+		if(last != NULL)
+			last = heap_remove(root,last);
+
+		if(last == NULL)
+			root = NULL;
+		/*
+		printf ("InorderTraversal: ");
+		inorderTraversal(root);
+		printf("\n");
+		*/
 	}
 }

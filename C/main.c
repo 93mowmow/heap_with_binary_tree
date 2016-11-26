@@ -1,12 +1,18 @@
 //#include "node.h"
 #include "btheap.h"
-
+#include "stdlib.h"
+#include <time.h>
+//#define test_node 1
+#define random_number_size 100
 int main(void)
 {
+	int a = 0;
+	int i = 0;
 	char ch;
 	Node *root, *last;
 	//HEAP TREE CREATION
 	Node *n1,*n2,*n3,*n4,*n5,*n6,*n7,*n8,*n9,*test,*fin ;
+	Node *nr[random_number_size];
 	/*
 	n1 = (Node *) malloc( sizeof(Node) );
 	n1->data = 1;
@@ -14,9 +20,12 @@ int main(void)
 	n1->right = NULL;
 	n1->left = NULL;
 	*/
+
 	n1 = InitialNode(1);
 	//printf("n1->data= %d",n1->data);
-	
+    InitialBTHeap(&root, &last, n1);
+
+#ifdef test_node
 	n2 = InitialNode(3); //Child swap
 	n3 = InitialNode(5);
 	n4 = InitialNode(7); //Lv1 New Level and Swap
@@ -27,8 +36,7 @@ int main(void)
 	n9 = InitialNode(2);
 	test = InitialNode(1000); //Tests for Perculate All the Way Up from Very Bottom
 	fin = InitialNode(10); //Tests for New Root Node Case if Retrieve After Remove() once.
-
-	InitialBTHeap(&root, &last, n1);
+	
 	//root = n1;
 	//last = n1;	
 	//printf("root->data= %d\n",root->data);
@@ -67,6 +75,8 @@ int main(void)
 	printf ("CURRENT ROOT: \n"); 
 	retrieve(root,last);
 	last = heap_remove(root,last);
+	
+	//HeapSort(root,last);
 	
 	printf ("InorderTraversal: ");
 	inorderTraversal(root);
@@ -165,7 +175,19 @@ int main(void)
 	retrieve(root,last);
 	if(last != NULL)
 		last = heap_remove(root,last);
-
+#else  
+    srand(time(NULL));  
+    printf("Insert node: ");
+	for(i=0;i<random_number_size;i++){
+		a=(rand()%random_number_size)+1;
+		printf("%d,",a);
+		nr[i] = InitialNode(a);
+		last = insert(root, nr[i]);		
+	} //end of for
+	printf("\n");
+	HeapSort(root,last);
+#endif	
 	ch = getchar();
+	
 	return 0;
 }
